@@ -132,6 +132,26 @@
             margin-left: 5px;
             font-size: 14px;
         }
+
+        .btn-close-red {
+            filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+            opacity: 1;
+            margin-left: auto;
+        }
+
+        .btn-close-red:hover {
+            opacity: 0.8;
+        }
+
+        #loginform .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #loginform .modal-header h1 {
+            margin-right: auto;
+        }
        
     </style>
 </head>
@@ -604,8 +624,8 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
+                                        <span class="btn-close btn-close-red" data-bs-dismiss="modal"></span>
                                         <h1>Login Form</h1>
-                                        <span class="btn-close" data-bs-dismiss="modal"></span>
                                     </div>
                                     <div class="modal-body">
                                         <form>
