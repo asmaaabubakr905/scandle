@@ -27,7 +27,7 @@ Font Awesome 6.4.2 - High-quality iconography.
 
 Google Fonts - Typography (Zilla Slab & La Belle Aurore).
  
- //edit buy rania
+ //edit by rania
 
 
 Project Structure
