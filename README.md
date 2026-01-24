@@ -1,6 +1,3 @@
-بما أنكِ تريدين رفع هذا الملف كجزء من الـ Pull Request الخاص بكِ، فمن الأفضل أن يكون باللغة الإنجليزية لأنه المتعارف عليه في مشاريع GitHub، خاصة أنكِ أضفتِ تعديلات تقنية.
-
-إليكِ الترجمة الاحترافية لملف الـ README.md:
 
 Scandleted - Luxury Candle E-commerce Website
 Project Overview
