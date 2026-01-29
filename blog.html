@@ -175,7 +175,11 @@
                 <div class="navbar-icons">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-regular fa-user"></i>
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <i class="fa-solid fa-bag-shopping position-relative">
+                        <span id="cart-badge"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            style="font-size: 0.5rem; display: none;">0</span>
+                    </i>
                     <button class="btn btn-login" data-bs-target="#loginform" data-bs-toggle="modal">LOG IN</button>
                 </div>
             </div>
