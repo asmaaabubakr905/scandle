@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candles Shop</title>
+    <title>Shop - Scandleted</title>
     <!-- Bootstrap RTL -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="./bootstrap.rtl.min.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- Google Fonts -->
@@ -16,83 +16,38 @@
     <style>
         body {
             font-family: 'Zilla Slab', serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
             background-color: #F9F5EA;
+            color: #000;
         }
 
         .announcement-bar {
             background-color: #000;
-            width: 100%;
-            padding: 8px 0;
-            text-align: center;
-        }
-
-        .announcement-text {
-            color: white;
-            margin: 0;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .btn {
-            border-radius: 25px;
-            color: #000;
-            text-transform: uppercase;
-            font-weight: 500;
-            padding: 8px 25px;
-            border: 1px solid #000;
-            background-color: transparent;
-            transition: all 0.3s;
-        }
-
-        .btn-login {
-            border-radius: 25px;
-            text-transform: uppercase;
-            padding: 5px 30px;
-            font-size: 14px;
-            border: 1px solid #000;
-        }
-
-        .btn-login:hover {
-            background-color: #000;
             color: #fff;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 14px;
         }
 
         .navbar {
             background-color: #F9F5EA !important;
-            padding: 15px 0;
-        }
-
-        .navbar-nav .nav-link {
-            color: black;
-            margin: 0 15px;
-            font-weight: 600;
-            font-size: 16px;
-
-        }
-
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: #C9A489;
-        }
-
-        .navbar-brand {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            padding: 20px 0;
         }
 
         .navbar-brand img {
             height: 40px;
         }
 
+        .nav-link {
+            color: #000 !important;
+            font-weight: 600;
+            margin: 0 15px;
+            text-transform: uppercase;
+        }
+
         .navbar-icons {
             display: flex;
             align-items: center;
             gap: 20px;
-            color: black;
         }
 
         .navbar-icons i {
@@ -100,210 +55,167 @@
             cursor: pointer;
         }
 
-        .navbar-icons i:hover {
-            color: #C9A489;
+        .btn-login {
+            border: 1px solid #000;
+            border-radius: 25px;
+            padding: 5px 25px;
+            font-size: 14px;
+            background: transparent;
+            transition: 0.3s;
         }
 
-        .navbar-collapse {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
+        .btn-login:hover {
+            background: #000;
+            color: #fff;
         }
 
-        /* Products Section Styles */
-        .products-section {
-            padding: 30px 0;
-        }
-
-        .section-title {
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 30px;
+        /* Shop Layout */
+        .shop-container {
+            padding: 40px 0;
         }
 
         .filter-sidebar {
-            background-color: #F9F5EA;
-            border: 1px solid #E6DFD1;
-            border-radius: 10px;
-            padding: 20px;
+            padding-right: 30px;
+        }
+
+        .filter-section {
             margin-bottom: 30px;
-        }
-
-        .filter-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #E6DFD1;
-        }
-
-        .filter-group {
-            margin-bottom: 25px;
-            border-bottom: 1px solid #E6DFD1;
-            padding-bottom: 15px;
         }
 
         .filter-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-weight: 700;
+            margin-bottom: 15px;
             cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        .filter-name {
-            font-weight: 500;
-            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .filter-options {
-            padding-left: 10px;
+            list-style: none;
+            padding: 0;
         }
 
-        .filter-option {
+        .filter-options li {
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
         }
 
-        .filter-option input[type="checkbox"] {
-            margin-right: 10px;
-            width: 16px;
-            height: 16px;
+        .filter-options a {
+            color: #555;
+            text-decoration: none;
+            transition: 0.3s;
         }
 
-        .filter-option label {
-            font-size: 14px;
-            margin-bottom: 0;
+        .filter-options a:hover {
+            color: #C9A489;
         }
 
-        .sort-dropdown {
-            border: 1px solid #E6DFD1;
-            border-radius: 25px;
-            padding: 5px 15px;
-            font-size: 14px;
-            background-color: transparent;
-            margin-bottom: 20px;
-        }
-
+        /* Product Grid */
         .product-card {
+            background: #fff;
+            padding: 20px;
             margin-bottom: 30px;
-            position: relative;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .product-card:hover {
+            border-color: #C9A489;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
         }
 
         .product-image {
-            background-color: #E6D7CA;
-            border-radius: 10px;
+            background: #F4F4F4;
+            margin-bottom: 20px;
             overflow: hidden;
-            position: relative;
-            margin-bottom: 15px;
-        }
-
-        .product-image img {
-            width: 100%;
-            transition: transform 0.3s;
-        }
-
-        .product-image:hover img {
-            transform: scale(1.05);
-        }
-
-
-        .product-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .product-description {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .product-price {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .product-original-price {
-            text-decoration: line-through;
-            color: #999;
-            margin-left: 5px;
-            font-size: 14px;
-        }
-
-        .btn-add-to-cart {
-            width: 100%;
-            border-radius: 25px;
-            border: 1px solid #000;
-            background-color: transparent;
-            color: #000;
-            padding: 8px 0;
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: all 0.3s;
+            aspect-ratio: 1/1;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .product-description {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .product-original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .btn-add-to-cart {
+            background: none;
+            border: none;
+            padding: 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
         .btn-add-to-cart:hover {
-            background-color: #000;
-            color: #fff;
+            color: #C9A489;
         }
 
-        .btn-add-to-cart i {
-            margin-left: 5px;
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 30px;
         }
 
-        @media (max-width: 991.98px) {
+        .sort-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .sort-dropdown {
+            border: none;
+            background: transparent;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        @media (max-width: 991px) {
+            .filter-sidebar {
+                display: none;
+            }
+
             .navbar-brand {
                 position: static;
                 transform: none;
-                margin: 1rem auto;
-            }
-
-            .navbar-collapse {
-                flex-direction: column;
-            }
-
-            .navbar-nav {
-                margin-bottom: 1rem;
-                text-align: center;
-                width: 100%;
-            }
-
-            .navbar-icons {
-                justify-content: center;
-                margin-bottom: 1rem;
-                width: 100%;
-                gap: 15px;
-            }
-
-            .filter-sidebar {
-                margin-bottom: 20px;
-            }
-        }
-        .rating-stars{
-            color: rgb(240, 240, 22);
-        }
-
-        @media (max-width: 767.98px) {
-            .products-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .sort-dropdown {
-                margin-top: 15px;
-                width: 100%;
-            }
-
-            .product-card {
-                margin-bottom: 20px;
             }
         }
     </style>
@@ -311,216 +223,154 @@
 
 <body>
     <div class="announcement-bar">
-        <p class="announcement-text">FREE Shipping On Orders Over $100 🎉</p>
+        FREE Shipping On Orders Over $100 🎉
     </div>
 
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand d-lg-none d-xl-none" href="./index.html">
+
+            <a class="navbar-brand d-lg-none" href="./index.html">
                 <img src="./images/Logo (2).svg" alt="Scandleted Logo">
             </a>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-
                 <ul class="navbar-nav">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./shop.html">SHOP</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about.html">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./blog.html">BLOG</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./testimonials.html">TESTIMONIALS</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="./shop.html">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.html">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./testimonials.html">TESTIMONIALS</a></li>
                 </ul>
 
-                <a class="navbar-brand d-none d-lg-block" href="./index.html">
+                <a class="navbar-brand d-none d-lg-block" href="./index.html"
+                    style="position: absolute; left: 50%; transform: translateX(-50%);">
                     <img src="./images/Logo (2).svg" alt="Scandleted Logo">
                 </a>
 
                 <div class="navbar-icons">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-regular fa-user"></i>
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <i class="fa-solid fa-bag-shopping position-relative">
+                        <span id="cart-badge"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            style="font-size: 0.5rem; display: none;">0</span>
+                    </i>
                     <button class="btn btn-login" data-bs-target="#loginform" data-bs-toggle="modal">LOG IN</button>
                 </div>
             </div>
         </div>
     </nav>
 
-
-    <section class="products-section">
+    <section class="shop-container">
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-3">
-                    <div class="filter-sidebar">
-                        <h2 class="filter-title">Filter</h2>
-
-                        <div class="filter-group">
-                            <div class="filter-header">
-                                <span class="filter-name">Aroma Level</span>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div class="filter-options">
-                                <div class="filter-option">
-                                    <input type="checkbox" id="soft">
-                                    <label for="soft">Soft</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="medium">
-                                    <label for="medium">Medium</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="strong">
-                                    <label for="strong">Strong</label>
-                                </div>
-                            </div>
+                <!-- Sidebar -->
+                <div class="col-lg-3 filter-sidebar">
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            Product Type
+                            <i class="fa-solid fa-chevron-down"></i>
                         </div>
+                        <ul class="filter-options">
+                            <li><a href="#">Candles (12)</a></li>
+                            <li><a href="#">Reed Diffusers (5)</a></li>
+                            <li><a href="#">Room Sprays (3)</a></li>
+                            <li><a href="#">Accessories (8)</a></li>
+                        </ul>
+                    </div>
 
-
-                        <div class="filter-group">
-                            <div class="filter-header">
-                                <span class="filter-name">Aroma Type</span>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div class="filter-options">
-                                <div class="filter-option">
-                                    <input type="checkbox" id="fruits">
-                                    <label for="fruits">Fruits</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="nature">
-                                    <label for="nature">Nature</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="parfum">
-                                    <label for="parfum">Parfum</label>
-                                </div>
-                            </div>
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            Scent Family
+                            <i class="fa-solid fa-chevron-right"></i>
                         </div>
+                        <ul class="filter-options" style="display: none;">
+                            <li><a href="#">Floral</a></li>
+                            <li><a href="#">Woody</a></li>
+                            <li><a href="#">Fresh</a></li>
+                            <li><a href="#">Spicy</a></li>
+                        </ul>
+                    </div>
 
-                        <div class="filter-group">
-                            <div class="filter-header">
-                                <span class="filter-name">Product Size</span>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div class="filter-options">
-                                <div class="filter-option">
-                                    <input type="checkbox" id="small">
-                                    <label for="small">Small</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="medium-size">
-                                    <label for="medium-size">Medium</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="big">
-                                    <label for="big">Big</label>
-                                </div>
-                            </div>
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            Price
+                            <i class="fa-solid fa-chevron-right"></i>
                         </div>
-
-                        <div class="filter-group">
-                            <div class="filter-header">
-                                <span class="filter-name">Rating</span>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                            <div class="filter-options">
-                                <div class="filter-option">
-                                    <input type="checkbox" id="small">
-                                    <label for="small"> <span class="rating-stars">★★★★★</span> 5 Stars</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="medium-size">
-                                    <label for="medium-size"> <span class="rating-stars">★★★★</span> 4 Stars & Up</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="big">
-                                    <label for="big"> <span class="rating-stars">★★★</span> 3 Stars & Up</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="filter-group">
-                            <div class="filter-header">
-                                <span class="filter-name">Price</span>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                            <div class="filter-options">
-                                <div class="filter-option">
-                                    <input type="checkbox" id="small">
-                                    <label for="small">Under $50</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="medium-size">
-                                    <label for="medium-size">$50 - $150</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="big">
-                                    <label for="big">Above $150</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="filter-group" style="border-bottom: none;">
-                            <div class="filter-header">
-                                <span class="filter-name">Other</span>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                            <div class="filter-options">
-                                <div class="filter-option">
-                                    <input type="checkbox" id="small">
-                                    <label for="small">In Stock</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="medium-size">
-                                    <label for="medium-size">Free Shipping</label>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" id="big">
-                                    <label for="big">New Arrivals</label>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="filter-options" style="display: none;">
+                            <li><a href="#">Under $20</a></li>
+                            <li><a href="#">$20 - $50</a></li>
+                            <li><a href="#">Over $50</a></li>
+                        </ul>
                     </div>
                 </div>
 
-
+                <!-- Product Grid -->
                 <div class="col-lg-9">
-                    <div class="products-header d-flex justify-content-between align-items-center mb-4">
+                    <div class="sort-container">
                         <h1 class="section-title mb-0">Candles</h1>
                         <div class="sort-container">
                             <select class="sort-dropdown">
-                                <option>Short By: Featured</option>
+                                <option>Sort By: Featured</option>
                                 <option>Price: Low to High</option>
                                 <option>Price: High to Low</option>
                                 <option>Newest</option>
-                                <option>Best Selling</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="row">
-
+                        <!-- Product 1 -->
                         <div class="col-md-4 col-sm-6">
                             <div class="product-card">
                                 <div class="product-image">
-                                    <img src="./images/Picture.png" alt="Brown Relac Candle">
+                                    <img src="./images/Picture.png" alt="Brown Relax Candle">
 
                                 </div>
-                                <h3 class="product-title">Brown Relac</h3>
+                                <h3 class="product-title">Brown Relax</h3>
                                 <p class="product-description">Together in the afternoon</p>
                                 <div class="mb-3">
                                     <span class="product-price">$33</span>
-                                    <span class="product-original-price">$37</span>
+                                </div>
+                                <button class="btn-add-to-cart">
+                                    ADD TO CART
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="./images/Picture (1).png" alt="Beach Sunshine Candle">
+                                </div>
+                                <h3 class="product-title">Beach Sunshine</h3>
+                                <p class="product-description">Enjoy the afternoon</p>
+                                <div class="mb-3">
+                                    <span class="product-price">$40</span>
+                                    <span class="product-original-price">$24</span>
+                                </div>
+                                <button class="btn-add-to-cart">
+                                    ADD TO CART
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="./images/Picture (2).png" alt="Vanilla Relax Candle">
+
+                                </div>
+                                <h3 class="product-title">Vanilla Relax</h3>
+                                <p class="product-description">Cake Smell</p>
+                                <div class="mb-3">
+                                    <span class="product-price">$20</span>
                                 </div>
                                 <button class="btn-add-to-cart">
                                     ADD TO CART
@@ -721,16 +571,30 @@
         <div class="container">
             <div
                 class="d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-center">
-                <p class="mb-2 mb-md-0 text-center text-md-start">© 2022 Scandleted. All right reserved.</p>
+                <p class="mb-2 mb-md-0 text-center text-md-start">© 2022 Scandleted. All rights reserved.</p>
                 <p class="mb-0 text-center text-md-end">Design Made By Asmaa</p>
             </div>
         </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Toast Notification Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header" style="background-color: #C9A489; color: white;">
+                <strong class="me-auto">Scandleted</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Product added to your cart! 🕯️
+            </div>
+        </div>
+    </div>
 
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
             // Filter Dropdown Toggle
             document.querySelectorAll('.filter-header').forEach(header => {
                 header.addEventListener('click', () => {
@@ -746,7 +610,24 @@
                     }
                 });
             });
-        </script>
+
+            // Handle Add to Cart
+            const cartBadge = document.getElementById('cart-badge');
+            const cartToast = document.getElementById('cartToast');
+            let cartCount = 0;
+
+            document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+                button.addEventListener('click', function () {
+                    cartCount++;
+                    cartBadge.textContent = cartCount;
+                    cartBadge.style.display = 'block';
+
+                    const toast = new bootstrap.Toast(cartToast);
+                    toast.show();
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

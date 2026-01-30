@@ -152,7 +152,6 @@
         #loginform .modal-header h1 {
             margin-right: auto;
         }
-       
     </style>
 </head>
 
@@ -195,7 +194,11 @@
                 <div class="navbar-icons">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-regular fa-user"></i>
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <i class="fa-solid fa-bag-shopping position-relative">
+                        <span id="cart-badge"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            style="font-size: 0.5rem; display: none;">0</span>
+                    </i>
                     <button class="btn btn-outline-secondary btn-login" data-bs-target="#loginform"
                         data-bs-toggle="modal">LOG IN</button>
                 </div>
@@ -271,7 +274,7 @@
                             <div class="col-md-3">
                                 <div class="product-card">
                                     <img src="./images/Picture (2).png" class="img-fluid">
-                                    <h3>Brown Relac</h3>
+                                    <h3>Brown Relax</h3>
                                     <p>Together in the afternoon</p>
                                     <div class="mb-2">
                                         <span class="product-price">$33</span>
@@ -438,232 +441,252 @@
                 <div class="col-md-6">
                     <div class="d-flex justify-content-center">
 
-                        <img src="./images/Image (4).png" class="img-fluid"">
-                    
-                </div>
+                        <img src="./images/Image (4).png" class="img-fluid">
+
+                    </div>
                 </div>
             </div>
         </div>
         <div class="position-relative">
             <img src="./images/Highlight Product.png" class="img-fluid">
-           
+
         </div>
-                    <div style="background-color: #F9F5EA; margin-top: -25px;">
-                        <br><br><br>
-                        <div class="container" style="background-color: #F9F5EA;">
-                            <h2>FAQs</h2>
-                            <div class="container my-5" style="background-color: #F9F5EA;">
-                                <div class="accordion" id="faqAccordion">
+        <div style="background-color: #F9F5EA; margin-top: -25px;">
+            <br><br><br>
+            <div class="container" style="background-color: #F9F5EA;">
+                <h2>FAQs</h2>
+                <div class="container my-5" style="background-color: #F9F5EA;">
+                    <div class="accordion" id="faqAccordion">
 
-                                    <!--q1-->
-                                    <div class="accordion-item border-0" style="background-color: #F9F5EA;">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button collapsed fw-bold fs-5 text-dark"
-                                                style="background-color: #F9F5EA;" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                aria-expanded="false" aria-controls="collapseOne">
-                                                Are candles safe for babies to toddlers?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse"
-                                            aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body text-secondary ps-4"
-                                                style="background-color: #F9F5EA;">
-                                                Absolutely, because we just use organic ingredients and does not use
-                                                hazardous chemicals
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="my-0">
-
-                                    <!--q2-->
-                                    <div class="accordion-item border-0" style="background-color: #F9F5EA;">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed fw-bold fs-5 text-dark"
-                                                style="background-color: #F9F5EA;" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                aria-expanded="false" aria-controls="collapseTwo">
-                                                After the smell runs out, will it pollute the environment?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse"
-                                            aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body text-secondary ps-4"
-                                                style="background-color: #F9F5EA;">
-                                                No, our products are made with environmentally friendly materials that
-                                                naturally decompose without harming the environment.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="my-0">
-
-                                    <!--q3-->
-                                    <div class="accordion-item border-0" style="background-color: #F9F5EA;">
-                                        <h2 class="accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed fw-bold fs-5 text-dark"
-                                                style="background-color: #F9F5EA;" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree">
-                                                Are the materials used for the manufacture of chemicals?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse"
-                                            aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body text-secondary ps-4"
-                                                style="background-color: #F9F5EA;">
-                                                No, we use only natural materials in our production process without
-                                                adding harmful chemicals.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="my-0">
-
-                                    <!--q4-->
-                                    <div class="accordion-item border-0" style="background-color: #F9F5EA;">
-                                        <h2 class="accordion-header" id="headingFour">
-                                            <button class="accordion-button collapsed fw-bold fs-5 text-dark"
-                                                style="background-color: #F9F5EA;" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                aria-expanded="false" aria-controls="collapseFour">
-                                                Can I resell wax products at a different price?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseFour" class="accordion-collapse collapse"
-                                            aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body text-secondary ps-4"
-                                                style="background-color: #F9F5EA;">
-                                                Yes, we have reseller programs available. Please contact our customer
-                                                service for more information about reselling options.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="my-0">
+                        <!--q1-->
+                        <div class="accordion-item border-0" style="background-color: #F9F5EA;">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed fw-bold fs-5 text-dark"
+                                    style="background-color: #F9F5EA;" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Are candles safe for babies to toddlers?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary ps-4" style="background-color: #F9F5EA;">
+                                    Absolutely, because we use only organic ingredients and do not use
+                                    hazardous chemicals
                                 </div>
                             </div>
                         </div>
-                        <!-- footer -->
-                        <div class="bg-black footer-section" style="color: white; padding: 50px 0 20px 0;">
-                            <div class="container">
-                                <div class="row">
+                        <hr class="my-0">
 
-                                    <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                        <div class="row">
-
-                                            <div class="col-12 col-sm-4 text-center text-sm-start mb-4 mb-sm-0">
-                                                <img src="./images/Logo (1).png" class="img-fluid"
-                                                    style="max-width: 150px;">
-                                            </div>
-
-
-                                            <div class="col-6 col-sm-4">
-                                                <ul style="list-style: none; padding-left: 0;" class="mb-4 mb-md-0">
-                                                    <li class="mb-2"><a href="./index.html"
-                                                            style="color: white; text-decoration: none;">Home</a></li>
-                                                    <li class="mb-2"><a href="./about.html"
-                                                            style="color: white; text-decoration: none;">About</a></li>
-                                                    <li class="mb-2"><a href="./testimonials.html"
-                                                            style="color: white; text-decoration: none;">Influencer</a>
-                                                    </li>
-                                                    <li class="mb-2"><a href="./blog.html"
-                                                            style="color: white; text-decoration: none;">Blog</a></li>
-                                                    <li class="mb-2"><a href="#"
-                                                            style="color: white; text-decoration: none;">Contact Us</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="col-6 col-sm-4">
-                                                <ul style="list-style: none; padding-left: 0;">
-                                                    <li class="mb-2"><a href="#"
-                                                            style="color: white; text-decoration: none;">FACEBOOK</a>
-                                                    </li>
-                                                    <li class="mb-2"><a href="#"
-                                                            style="color: white; text-decoration: none;">INSTAGRAM</a>
-                                                    </li>
-                                                    <li class="mb-2"><a href="#"
-                                                            style="color: white; text-decoration: none;">TWITTER</a>
-                                                    </li>
-                                                    <li class="mb-2"><a href="#"
-                                                            style="color: white; text-decoration: none;">LINKEDIN</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div
-                                        class="col-12 col-md-6 d-flex flex-column justify-content-center text-center text-md-end align-items-center align-items-md-end mt-4 mt-md-0">
-                                        <h3 class="mb-2">Stay in the know — we'll</h3>
-                                        <h3 class="mb-3">send you offers & more.</h3>
-                                        <button class="btn btn-outline-secondary"
-                                            style="color: white; border-radius: 20px; padding: 6px 20px; text-transform: uppercase;">Sign
-                                            Up</button>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="container">
-                                <hr style="opacity: 1; border-color: #555; margin: 30px auto; width: 90%;">
-                            </div>
-
-
-                            <div class="container">
-                                <div
-                                    class="d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-center">
-                                    <p class="mb-2 mb-md-0 text-center text-md-start">© 2022 Scandleted. All right
-                                        reserved.</p>
-                                    <p class="mb-0 text-center text-md-end">Design Made By Asmaa</p>
+                        <!--q2-->
+                        <div class="accordion-item border-0" style="background-color: #F9F5EA;">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fw-bold fs-5 text-dark"
+                                    style="background-color: #F9F5EA;" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    After the smell runs out, will it pollute the environment?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary ps-4" style="background-color: #F9F5EA;">
+                                    No, our products are made with environmentally friendly materials that
+                                    naturally decompose without harming the environment.
                                 </div>
                             </div>
                         </div>
+                        <hr class="my-0">
 
-                        <div class="modal fade" id="loginform" data-bs-backdrop="static">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <span class="btn-close btn-close-red" data-bs-dismiss="modal"></span>
-                                        <h1>Login Form</h1>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                                    aria-describedby="emailHelp">
-                                                <div id="emailHelp" class="form-text">We'll never share your email with
-                                                    anyone else.</div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
-                                            </div>
-                                            <div class="mb-3 form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </form>
-                                    </div>
+                        <!--q3-->
+                        <div class="accordion-item border-0" style="background-color: #F9F5EA;">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-bold fs-5 text-dark"
+                                    style="background-color: #F9F5EA;" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Are the materials used for the manufacture of chemicals?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary ps-4" style="background-color: #F9F5EA;">
+                                    No, we use only natural materials in our production process without
+                                    adding harmful chemicals.
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-0">
+
+                        <!--q4-->
+                        <div class="accordion-item border-0" style="background-color: #F9F5EA;">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed fw-bold fs-5 text-dark"
+                                    style="background-color: #F9F5EA;" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Can I resell wax products at a different price?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary ps-4" style="background-color: #F9F5EA;">
+                                    Yes, we have reseller programs available. Please contact our customer
+                                    service for more information about reselling options.
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-0">
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="bg-black footer-section" style="color: white; padding: 50px 0 20px 0;">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 col-md-6 mb-4 mb-md-0">
+                            <div class="row">
+
+                                <div class="col-12 col-sm-4 text-center text-sm-start mb-4 mb-sm-0">
+                                    <img src="./images/Logo (1).png" class="img-fluid" style="max-width: 150px;">
+                                </div>
+
+
+                                <div class="col-6 col-sm-4">
+                                    <ul style="list-style: none; padding-left: 0;" class="mb-4 mb-md-0">
+                                        <li class="mb-2"><a href="./index.html"
+                                                style="color: white; text-decoration: none;">Home</a></li>
+                                        <li class="mb-2"><a href="./about.html"
+                                                style="color: white; text-decoration: none;">About</a></li>
+                                        <li class="mb-2"><a href="./testimonials.html"
+                                                style="color: white; text-decoration: none;">Influencer</a>
+                                        </li>
+                                        <li class="mb-2"><a href="./blog.html"
+                                                style="color: white; text-decoration: none;">Blog</a></li>
+                                        <li class="mb-2"><a href="#"
+                                                style="color: white; text-decoration: none;">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4">
+                                    <ul style="list-style: none; padding-left: 0;">
+                                        <li class="mb-2"><a href="#"
+                                                style="color: white; text-decoration: none;">FACEBOOK</a>
+                                        </li>
+                                        <li class="mb-2"><a href="#"
+                                                style="color: white; text-decoration: none;">INSTAGRAM</a>
+                                        </li>
+                                        <li class="mb-2"><a href="#"
+                                                style="color: white; text-decoration: none;">TWITTER</a>
+                                        </li>
+                                        <li class="mb-2"><a href="#"
+                                                style="color: white; text-decoration: none;">LINKEDIN</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
 
 
+                        <div
+                            class="col-12 col-md-6 d-flex flex-column justify-content-center text-center text-md-end align-items-center align-items-md-end mt-4 mt-md-0">
+                            <h3 class="mb-2">Stay in the know — we'll</h3>
+                            <h3 class="mb-3">send you offers & more.</h3>
+                            <button class="btn btn-outline-secondary"
+                                style="color: white; border-radius: 20px; padding: 6px 20px; text-transform: uppercase;">Sign
+                                Up</button>
+                        </div>
+                    </div>
+                </div>
 
-                        <script>
 
-                            document.addEventListener('DOMContentLoaded', function () {
-                                var myCarousel = new bootstrap.Carousel(document.getElementById('productCarousel'), {
-                                    interval: 2000,
-                                    wrap: true
-                                });
+                <div class="container">
+                    <hr style="opacity: 1; border-color: #555; margin: 30px auto; width: 90%;">
+                </div>
+
+
+                <div class="container">
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-center">
+                        <p class="mb-2 mb-md-0 text-center text-md-start">© 2022 Scandleted. All rights reserved.</p>
+                        <p class="mb-0 text-center text-md-end">Design Made By Asmaa</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="loginform" data-bs-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="btn-close btn-close-red" data-bs-dismiss="modal"></span>
+                            <h1>Login Form</h1>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with
+                                        anyone else.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Toast Notification Container -->
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header" style="background-color: #C9A489; color: white;">
+                        <strong class="me-auto">Scandleted</strong>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Product added to your cart! 🕯️
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Initialize Carousel
+                    var myCarousel = new bootstrap.Carousel(document.getElementById('productCarousel'), {
+                        interval: 2000,
+                        wrap: true
+                    });
+
+                    // Handle Add to Cart
+                    const cartBadge = document.getElementById('cart-badge');
+                    const cartToast = document.getElementById('cartToast');
+                    let cartCount = 0;
+
+                    document.querySelectorAll('button').forEach(button => {
+                        if (button.textContent.trim() === 'ADD TO CART') {
+                            button.addEventListener('click', function () {
+                                cartCount++;
+                                cartBadge.textContent = cartCount;
+                                cartBadge.style.display = 'block';
+
+                                const toast = new bootstrap.Toast(cartToast);
+                                toast.show();
                             });
-                        </script>
-                        <script
-                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                        }
+                    });
+                });
+            </script>
 
 </body>
 
